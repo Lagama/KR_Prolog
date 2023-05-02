@@ -1,0 +1,5 @@
+Credit history (C): A32
+Savings (K): A61
+Personal status and sex (Q): A92 or A95 (PROTECTED FEATURE)
+Age (Y): A131 (PROTECTED FEATURE)
+Decision class (AO): bad_credit
