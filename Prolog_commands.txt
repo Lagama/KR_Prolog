@@ -1,0 +1,19 @@
+Part 2a:
+
+
+The following command:
+?- applicant(Applicant, _, _, _, _, a32, _, _, _, _, _, a61, _, _, _, _, _, a92, _, _, _, _, _, _, _, a131, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, bad_credit, _, _)
+gives:
+    Applicant = 17
+    Applicant = 20
+    Applicant = 23
+    Applicant = 30
+    Applicant = 33
+    Applicant = 70
+    Applicant = 75
+    Applicant = 76
+    Applicant = 83
+    Applicant = 93
+    Applicant = 97
+These are the entries we should check for any signs of discrimination. Note that it's only discrimination when the
+decision class is in any way influenced by any of the protected features (Age (Column Y), Personal status and sex (Column Q))
