@@ -1,6 +1,7 @@
 :- dynamic output/ 1 .
 :- dynamic input/ 1 .
 
+% last parameter in input() is the rule confidence factor, which is computed by multiplying the smallest certainty value of symbols in the antecedent of the rule with the certainty reported by the classifier for the instance being processed,
 output([good_credit, 1.0]) :- input([[a14, 1], [vs, 0.97], [a34, 1], [a40, 1], [vl, 1], [a61, 1], [a75, 1], [vh, 1], [a93, 1], [a101, 1], [vr, 1], [a121, 1], [a134, 1], [a143, 1], [a152, 1], [l, 1], [a172, 1], [vl, 1], [a191, 1], [a201, 1], 0.97]).
 output([good_credit, 0.99]) :- input([[a14, 1], [s, 0.97], [a34, 1], [a43, 1], [vl, 0.99], [a61, 1], [a73, 1], [vh, 1], [a93, 1], [a101, 1], [f, 1], [a122, 1], [a132, 1], [a143, 1], [a152, 1], [l, 1], [a173, 1], [vl, 1], [a191, 1], [a201, 1], 0.9602999999999999]).
 output([good_credit, 0.98]) :- input([[a14, 1], [vs, 0.97], [a32, 1], [a43, 1], [vl, 0.98], [a61, 1], [a73, 1], [vh, 1], [a94, 1], [a101, 1], [f, 1], [a121, 1], [a131, 1], [a143, 1], [a152, 1], [vl, 1], [a173, 1], [vl, 1], [a191, 1], [a201, 1], 0.9506]).
