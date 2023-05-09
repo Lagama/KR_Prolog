@@ -1,5 +1,26 @@
 Credit history (C): A32
 Savings (K): A61
-Personal status and sex (Q): A92 or A95 (PROTECTED FEATURE)
+Present employment rate: A73
+Installment rate in percentage of disposable income: vh
+Other debtors / guarantors: a101
+Personal status and sex (Q): A92
 Age (Y): A131 (PROTECTED FEATURE)
+Other installment plans: a143
+Telephone: a191
+Foreign worker: a201
 Decision class (AO): bad_credit
+
+First sensitive profile (female applicant): 
+A young female whose existing
+checking account at the bank is ‘<0DM‘, the credit duration is ‘very short‘, her
+credit history is labeled as ‘existing credits paid back duly until now‘, the pur-
+pose of the loan is to ‘buy a new car‘, the credit amount is encoded as ‘very low‘,
+the savings account/bonds is ‘<100DM‘, her present employment falls in the cate-
+gory ‘1 <=...< 4 years‘, the installment rate in percentage of disposable income is
+encoded as ‘very high‘, her marital status is ‘separated‘, she does not have ‘other
+debtors/guarantors‘, her present residence date is ‘fairly recent‘, she ‘owns a real
+state property, and she does not have other installment plans. Moreover, the ap-
+plicant is the ‘owner‘ of her house, her number of existing credits at this bank is
+labeled as ‘very low‘, she is an ‘unskilled resident‘, the number of people being
+liable to provide maintenance for is labeled as ‘very low‘ by the bank, she does
+not have a telephone, and she is a ‘foreign worker‘.
