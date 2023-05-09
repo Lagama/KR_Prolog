@@ -17,3 +17,14 @@ gives:
     Applicant = 97
 These are the entries we should check for any signs of discrimination. Note that it's only discrimination when the
 decision class is in any way influenced by any of the protected features (Age (Column Y), Personal status and sex (Column Q))
+
+===============
+
+Some commands I tried on the new knowledge base. I think this should be somewhat close to the correct answer:
+
+input([[_, _], [_, _], [a32, _], [_, _], [_, _], [a61, _], [_, _], [_, _], [a92, 1], [_, _], [_, _], [_, _], [a131, _], [_, _], [_, _], [_, _], [_, _], [_, _], [_, _], [_, _], _])
+
+retractall(output()), retractall(input()), assertz(input([[_, _], [_, _], [a32, _], [_, _], [_, _], [a61, _], [_, _], [_, _], [a92, 1], [_, _], [_, _], [_, _], [a131, _], [_, _], [_, _], [_, _], [_, _], [_, _], [_, _], [_, _], _])), output(bad_credit, _)
+
+
+retractall(output()), assertz(input([[_, _], [_, _], [a32, _], [_, _], [_, _], [a61, _], [_, _], [_, _], [Sex, _], [_, _], [_, _], [_, _], [a131, _], [_, _], [_, _], [_, _], [_, _], [_, _], [_, _], [_, _], _])), output([bad_credit, _]), (Sex==a92;Sex==a95)
