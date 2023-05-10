@@ -1,5 +1,4 @@
 import csv
-from itertools import combinations
 
 """
 Code quality is absolute thrash; please don't judge :)
