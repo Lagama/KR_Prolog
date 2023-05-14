@@ -1,3 +1,6 @@
+Correct participant:
+rule(a11,_,vs,_,a32,_,a40,_,vl,_,a61,_,a73,_,vh,_,a92,_,a101,_,f,_,a121,_,a131,_,a143,_,a152,_,vl,_,Job,_,vl,_,a191,_,a201,_,bad_credit,_,_)
+
 Credit history (C): A32
 Savings (K): A61
 Present employment rate: A73

@@ -1,0 +1,17 @@
+rule(a13,_,l,_,a32,_,a43,_,m,_,a61,_,_,_,vh,_,a93,_,a101,_,f,_,a123,_,a131,_,a143,_,a152,_,vl,_,a173,_,vl,_,a191,_,a201,_,bad_credit,_,Conf_young),
+rule(a13,_,l,_,a32,_,a43,_,m,_,a61,_,_,_,vh,_,a93,_,a101,_,f,_,a123,_,Age,_,a143,_,a152,_,vl,_,a173,_,vl,_,a191,_,a201,_,good_credit,_,Conf_old),\+Age=a131,
+
+
+Second sensitive profile (young applicant):
+A young male whose existing checking account at the bank is ‘>=200DM‘, the credit duration is ‘long‘, his credit
+history is labeled as ‘existing credits paid back duly until now‘, the purpose of
+the loan is to ‘buy a radio/television‘, the credit amount is encoded as ‘medium‘,
+the savings account/bonds is ‘<100DM‘, his present employment duration falls
+in the category ‘1 <=...< 4 years‘, the installment rate in percentage of disposable
+income is encoded as ‘very high‘, his marital status is ‘single‘, he does not have
+‘other debtors/guarantors‘, his present residence date is ‘fairly recent‘, he ‘owns
+a car‘, and he does not have other installment plans. Moreover, the applicant is
+the ‘owner‘ of his house, his number of existing credits at this bank is labeled as
+‘very low‘, he is a ‘skilled employee/official‘, the number of people being liable
+to provide maintenance for is labeled as ‘very low‘, he does not have a registered
+telephone, and he is a ‘foreign worker‘
