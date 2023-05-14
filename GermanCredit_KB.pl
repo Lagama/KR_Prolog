@@ -4,12 +4,6 @@
 % Property,_,a131,_,OtherInstallmentsPlans,_,Housing,_,ExistingCredits,_,Job,_,ProvideMaintenance,_,
 % Telephone,_,ForeignWorker,_,bad_credit,_,_)
 
-% Rule structure:
-% rule(ExistingCheckingAccount,_,Duration,_,CreditHistory,_,Purpose,_,CreditAmount,_,SavingAccounts,_,
-% PresentEmploymentSince,_,InstallmentRate,_,PersonalStatus,_,OtherDebtors,_,PresentResidentSince,_,
-% Property,_,a131,_,OtherInstallmentsPlans,_,Housing,_,ExistingCredits,_,Job,_,ProvideMaintenance,_,
-% Telephone,_,ForeignWorker,_,bad_credit,_,_)
-
 rule(a12, 1, m, 1, a34, 1, a43, 1, vl, 0.97, a61, 1, a75, 1, vh, 1, a93, 1, a101, 1, f, 1, a122, 1, a133, 1, a143, 1, a152, 1, l, 1, a172, 1, vl, 1, a191, 1, a201, 1, good_credit, 0.64, 0.98).
 rule(a11, 1, m, 1, a32, 1, a43, 1, l, 0.99, a61, 1, a75, 1, vh, 1, a93, 1, a101, 1, vr, 1, a121, 1, a134, 1, a141, 1, a151, 1, vl, 1, a172, 1, vl, 1, a191, 1, a201, 1, bad_credit, 0.61, 0.98).
 rule(a14, 1, vs, 0.97, a34, 1, a42, 1, vl, 1, a61, 1, a72, 1, m, 1, a92, 1, a101, 1, vr, 1, a122, 1, a131, 1, a143, 1, a151, 1, l, 1, a172, 1, vl, 1, a191, 1, a201, 1, good_credit, 0.85, 0.98).
