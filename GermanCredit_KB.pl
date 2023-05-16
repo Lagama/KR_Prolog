@@ -113,6 +113,28 @@ checksexdiscrimination :-
     write(" | Rule confidence of female applicant: "), write(Conf_rule_f),
     write(" | Rule confidence of male applicant: "), write(Conf_rule_m).
 
+/* Comments and explanation 2a
+Running the following query with the profile of the female applicant results in an
+overall confidence value of Conf_rule_f = 0.87.
+
+Query1 :
+rule(a11, _, vs, _, a32, _, a40, _, vl, _, a61, _, a73, _, vh, _, a92, _, a101, _, f, _, a121, _, a131, _, a143, _, a152, _, vl, _, a172, _, vl, _, a191, _, a201, _, bad_credit, Conf_credit_f, Conf_rule_f).
+Output:		Conf_credit_f = 0.8
+			Conf_rule_f = 0.87
+
+Running a query2 that contains the same attribute information as the
+specified female applicant, but with “good_credit” and “X” as variable
+on Attribute 9 personal status and sex, returns “false”. This means that
+there is no other instance where an applicant has the same attribute
+information but with a different personal status and sex and credit score.
+From this we can conclude that the female applicant was not discriminated
+against due to her gender by the AI-powered decision system.
+
+Query2 :
+rule(a11, _, vs, _, a32, _, a40, _, vl, _, a61, _, a73, _, vh, _, X, _, a101, _, f, _, a121, _, a131, _, a143, _, a152, _, vl, _, a172, _, vl, _, a191, _, a201, _, good_credit, Conf_credit_m, Conf_rule_m).
+Output:		false
+*/
+
 checkagediscrimination :-
     rule(a13,_,l,_,a32,_,a43,_,m,_,a61,_,_,_,vh,_,a93,_,a101,_,f,_,a123,_,a131,_,a143,_,a152,_,vl,_,a173,_,vl,_,a191,_,a201,_,bad_credit,Conf_credit_y,Conf_rule_y),
     rule(a13,_,l,_,a32,_,a43,_,m,_,a61,_,_,_,vh,_,a93,_,a101,_,f,_,a123,_,Age,_,a143,_,a152,_,vl,_,a173,_,vl,_,a191,_,a201,_,good_credit,Conf_credit_o,Conf_rule_o),\+Age=a131,
@@ -120,3 +142,10 @@ checkagediscrimination :-
     write(" | Credit confidence of old applicant: "), write(Conf_credit_o),
     write(" | Rule confidence of young applicant: "), write(Conf_rule_y),
     write(" | Rule confidence of old applicant: "), write(Conf_rule_o).
+
+/* Comments and explanation 2b
+
+
+
+
+ * /
