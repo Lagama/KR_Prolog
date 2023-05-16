@@ -106,13 +106,17 @@ rule(a13, 1, l, 1, a32, 1, a43, 1, m, 0.99, a61, 1, a73, 1, vh, 1, a93, 1, a101,
 rule(a13, 1, l, 1, a32, 1, a43, 1, m, 0.92, a61, 1, a73, 1, vh, 1, a93, 1, a101, 1, l, 1, a123, 1, a131, 1, a143, 1, a152, 1, vl, 1, a173, 1, vl, 1, a191, 1, a201, 1, good_credit, 0.7, 0.65).
 
 checksexdiscrimination :-
-    rule(a11,_,vs,_,a32,_,a40,_,vl,_,a61,_,a73,_,vh,_,a92,_,a101,_,f,_,a121,_,a131,_,a143,_,a152,_,vl,_,Job,_,vl,_,a191,_,a201,_,bad_credit,_,Conf_female),
-    rule(a11,_,vs,_,a32,_,a40,_,vl,_,a61,_,a73,_,vh,_,PersonalStatus,_,a101,_,f,_,a121,_,a131,_,a143,_,a152,_,vl,_,Job,_,vl,_,a191,_,a201,_,good_credit,_,Conf_male),\+PersonalStatus=a92,
-    write("Rule confidence of female applicant: "), write(Conf_female),
-    write(" | Rule confidence of male applicant: "), write(Conf_male).
+    rule(a11,_,vs,_,a32,_,a40,_,vl,_,a61,_,a73,_,vh,_,a92,_,a101,_,f,_,a121,_,a131,_,a143,_,a152,_,vl,_,Job,_,vl,_,a191,_,a201,_,bad_credit,Conf_credit_f,Conf_rule_f),
+    rule(a11,_,vs,_,a32,_,a40,_,vl,_,a61,_,a73,_,vh,_,PersonalStatus,_,a101,_,f,_,a121,_,a131,_,a143,_,a152,_,vl,_,Job,_,vl,_,a191,_,a201,_,good_credit,Conf_credit_m,Conf_rule_m),\+PersonalStatus=a92,
+    write("Credit confidence of female applicant: "), write(Conf_credit_f),
+    write(" | Credit confidence of male applicant: "), write(Conf_credit_m),
+    write(" | Rule confidence of female applicant: "), write(Conf_rule_f),
+    write(" | Rule confidence of male applicant: "), write(Conf_rule_m).
 
 checkagediscrimination :-
-    rule(a13,_,l,_,a32,_,a43,_,m,_,a61,_,_,_,vh,_,a93,_,a101,_,f,_,a123,_,a131,_,a143,_,a152,_,vl,_,a173,_,vl,_,a191,_,a201,_,bad_credit,_,Conf_young),
-    rule(a13,_,l,_,a32,_,a43,_,m,_,a61,_,_,_,vh,_,a93,_,a101,_,f,_,a123,_,Age,_,a143,_,a152,_,vl,_,a173,_,vl,_,a191,_,a201,_,good_credit,_,Conf_old),\+Age=a131,
-    write("Rule confidence of young applicant: "), write(Conf_young),
-    write(" | Rule confidence of older applicant: "), write(Conf_old).
+    rule(a13,_,l,_,a32,_,a43,_,m,_,a61,_,_,_,vh,_,a93,_,a101,_,f,_,a123,_,a131,_,a143,_,a152,_,vl,_,a173,_,vl,_,a191,_,a201,_,bad_credit,Conf_credit_y,Conf_rule_y),
+    rule(a13,_,l,_,a32,_,a43,_,m,_,a61,_,_,_,vh,_,a93,_,a101,_,f,_,a123,_,Age,_,a143,_,a152,_,vl,_,a173,_,vl,_,a191,_,a201,_,good_credit,Conf_credit_o,Conf_rule_o),\+Age=a131,
+    write("Credit confidence of young applicant: "), write(Conf_credit_y),
+    write(" | Credit confidence of old applicant: "), write(Conf_credit_o),
+    write(" | Rule confidence of young applicant: "), write(Conf_rule_y),
+    write(" | Rule confidence of old applicant: "), write(Conf_rule_o).
